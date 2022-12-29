@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+def isuppercase(letter):
+    if ord(letter) >= 97 and ord(letter) <= 12:
+        return (ord(letter) - 32)
+    else:
+        return (ord(letter))
+
+
 def uppercase(str):
-    for char in str:
-        if char >= 'a' and char <= 'z':
-            print("{}".format(chr(ord(char) - 32)), end="")
-        else:
-            print("{}".format(char), end="")
+    new = ""
+    for letter in str:
+        new += "%c" % isuppercase(letter)
+    print("{:s}".format(new))
